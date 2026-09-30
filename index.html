@@ -104,7 +104,7 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Numerical Example<span class="subtitle"><br>Option Value: Land valuation & development timing decision</span>
-						* (Example nicked from Geltner et al.)
+						* (Example nicked from <a href="https://www.routledge.com/Commercial-Real-Estate-Analysis-for-Investment-Finance-and-Development/Geltner-Miller-VanDeMinne-Eichholtz-Lindenthal-Shen/p/book/9781041076391">Geltner et al.</a>)
 						* XYZ Development owns a tract of land that could be developed into a property worth `$`100m today
 						* Current construction costs for this property are `$`88.24m
 							- Construction costs are estimated to rise by 2% annually
@@ -199,19 +199,20 @@
 					</textarea>
 				</section>
 
-				<section data-markdown >
+				<section data-markdown class="compacttable">
 					<textarea data-template>
 						## Consistent pricing of risk? <span class="subtitle"><br>Yes!</span>
 						* Required rate of return for replication portfolio is 34.42%
-							- Return: $ \frac{0.7 \times \\$23.21 - \\$12.09}{ \\$12.09} = \frac{\\$4.16}{ \\$12.09} = 34.42%$
+							- Return: $ \frac{0.7 \times \\$23.21 - \\$12.09}{ \\$12.09} = \frac{\\$4.16}{ \\$12.09} = 34.42\\%$
 							- Clearly, the earlier assumption of a 20% discount rate in NPV example was too low,
 							- Discount the `$`16.25 at 34.42% for an NPV of `$`12.09 (ignore rounding errors)
-						* Is this in line with return per unit of risk in market?
-						* Yes, risk increases by same factor:
-							- Investment outcome range is measure of risk in binomial case.
-							- Outcome range for existing buildings: $ \frac{\\$113.21-\\$94.34}{ \\$94.34} - \frac{\\$78.62-\\$94.34}{\\$94.34} = 0.20 - (-0.1667) = 36.67\\%$
-							- For option $\frac{\\$23.21 - \\$0}{\\$12.09} = 192\\%$
-							- Outcome range for option is 5.24 times higher than for existing buildings: 192% / 36.67% = 5.24
+						* Is this in line with the market’s price of risk? Risk = range of outcomes (binomial case). Both risk <em>and</em> risk premium scale by the same factor:
+
+						| | Built property | Development option | Ratio |
+						|:---|---:|---:|---:|
+						| Risk: range of outcomes | 20% &minus; (&minus;16.67%) = 36.67% | (23.21 &minus; 0) / 12.09 = 192% | 5.24&times; |
+						| Risk premium: E[r] &minus; r<sub>f</sub> | 9% &minus; 3% = 6% | 34.42% &minus; 3% = 31.42% | 5.24&times; |
+						| Premium per unit of risk | 6 / 36.67 = 0.164 | 31.42 / 192 = 0.164 | 1 |
 
 						Note:
 
@@ -632,7 +633,7 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Further Reading <span class="subtitle"><br>Book chapters &amp; papers referenced in this session</span>
-						* <strong>Book:</strong> Geltner, Miller, Clayton &amp; Eichholtz, <em>Commercial Real Estate Analysis and Investments</em> — online Part IV (Real Estate Development, Land Valuation &amp; the Real Options Model)
+						* <strong>Book:</strong> Geltner, Miller, Van de Minne, Eichholtz, Lindenthal &amp; Shen, <a href="https://www.routledge.com/Commercial-Real-Estate-Analysis-for-Investment-Finance-and-Development/Geltner-Miller-VanDeMinne-Eichholtz-Lindenthal-Shen/p/book/9781041076391"><em>Commercial Real Estate Analysis for Investment, Finance, and Development</em></a> (4th ed., 2026) — online Part IV (Real Estate Development, Land Valuation &amp; the Real Options Model)
 						* Titman, S. (1985). <a href="http://www.jstor.org/stable/1814815">Urban Land Prices Under Uncertainty</a>. <em>American Economic Review</em>, 75, 505–514.
 						* Black, F. &amp; Scholes, M. (1973). <a href="https://doi.org/10.1086/260062">The Pricing of Options and Corporate Liabilities</a>. <em>Journal of Political Economy</em>, 81, 637–654.
 						* Bao, T. &amp; Ding, L. (2016). <a href="https://doi.org/10.1111/1540-6229.12116">Nonrecourse Mortgage and Housing Price: Boom, Bust, and Rebound</a>. <em>Real Estate Economics</em>, 44, 584–605.
