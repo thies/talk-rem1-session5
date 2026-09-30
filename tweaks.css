@@ -128,3 +128,10 @@ span.smalltable >* td,th {
 mark{
      background-color:#c0ffc8;
     }
+
+/* compact markdown tables (e.g. Options Shape Risk slides) */
+section.compacttable table td,
+section.compacttable table th {
+  font-size: 0.6em;
+  padding: 0.25em 0.6em;
+}

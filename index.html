@@ -69,7 +69,7 @@
 							- Taylor Wimpey alone owns more than 12,000 titles via more than 400 companies. Estimates are too low - more complete sources show higher numbers.
 							<img src="imgs/whoownsengland.png" height=280>
 						* Why don’t they build? It surely must be profitable?
-						* Update: by 2025/26, Britain’s largest housebuilders hold land banks sufficient for 441,000+ homes (~£200bn); Labour is now forcing delivery timeframes, with non-delivering land at risk of compulsory purchase.
+						* 2025/26: Britain’s largest housebuilders hold land banks sufficient for 441,000+ homes (~£200bn).
 
 					</textarea>
 				</section>
@@ -409,6 +409,63 @@
 					</textarea>
 				</section>
 
+				<section data-markdown class="compacttable">
+					<textarea data-template>
+						## Options Shape Risk<span class="subtitle"><br>Same lot: just before and after the redevelopment option is exercised</span>
+						* Split property value into structure (discounted rents) and land (the residual&mdash;roughly the value of the redevelopment option)
+
+						| | Before: semi, redevelopment triggered<br><img src="imgs/vinery_road_1.jpg" width=300> | After: option exercised<br><img src="imgs/vinery_road_3.jpg" width=300> |
+						|:-----|-----:|-----:|
+						| Property value (current) | £1,000K | ~£3,550K |
+						| Property (highest and best use) | £3,500K | £3,500K |
+						| Current structure (DCF) | £200K | £3,500K |
+						| Constr. cost (excl. land) | £2,500K | £2,500K |
+						| Land value (Samuelson-McKean*) | £800K | £50K |
+
+						<p class="source">* <a href="https://docs.google.com/spreadsheets/d/1ZFnyyHze9uvHZMFEPuiY2sxWSYCtbp26/edit?usp=sharing&ouid=106899193538582867949&rtpof=true&sd=true">Spreadsheet</a>: 8% volatility of underlying, asset yield 5%, R<sub>f</sub> 5%, exercise price = constr. cost + value of current structure. Semi: V &ge; trigger (~£3,475K), so redeveloping is optimal and land = V &minus; exercise price</p>
+					</textarea>
+				</section>
+
+				<section data-markdown class="compacttable">
+					<textarea data-template>
+						## Options Shape Risk<span class="subtitle"><br>Now assume a positive shock to rents: +10%</span>
+						* Structure value increases with rents&hellip; But what about land?
+
+						| | Before: semi, redevelopment triggered<br><img src="imgs/vinery_road_1.jpg" width=300> | After: option exercised<br><img src="imgs/vinery_road_3.jpg" width=300> |
+						|:-----|-----:|-----:|
+						| Property | ? | ? |
+						| Structure (+10%) | £220K | £3,850K |
+						| Land | ? | ? |
+					</textarea>
+				</section>
+
+				<section data-markdown class="compacttable">
+					<textarea data-template>
+						## Options Shape Risk<span class="subtitle"><br>How does land value respond?</span>
+						* <a href="https://docs.google.com/spreadsheets/d/1ZFnyyHze9uvHZMFEPuiY2sxWSYCtbp26/edit?usp=sharing&ouid=106899193538582867949&rtpof=true&sd=true">Rough land value estimate</a> from the Samuelson-McKean formula (the assumptions need some convincing)
+
+						| | Before: semi, redevelopment triggered<br><img src="imgs/vinery_road_1.jpg" width=300> | After: option exercised<br><img src="imgs/vinery_road_3.jpg" width=300> |
+						|:-----|-----:|-----:|
+						| Property | ? | ? |
+						| Structure (+10%) | £220K | £3,850K |
+						| Land | £1,130K | £62K |
+					</textarea>
+				</section>
+
+				<section data-markdown class="compacttable">
+					<textarea data-template>
+						## Options Shape Risk<span class="subtitle"><br>Option values and property investment: why do we care?</span>
+						* Same location, same market segment&hellip; but a very different risk/return profile once the option is exercised!
+
+						| | Before: semi, redevelopment triggered<br><img src="imgs/vinery_road_1.jpg" width=300> | After: option exercised<br><img src="imgs/vinery_road_3.jpg" width=300> |
+						|:-----|-----:|-----:|
+						| Property | £1,350K (+35%) | ~£3,912K (+10.2%) |
+						| Structure (+10%) | £220K | £3,850K |
+						| Land | £1,130K | £62K |
+					</textarea>
+				</section>
+
+
 				<section data-markdown >
 					<textarea data-template>
 						## Multiple Options <span class="subtitle"><br>Properties have many real options embedded</span>
@@ -503,13 +560,21 @@
 							</tr>
 						</table><span class="source">Source: <a href="https://www.economist.com/finance-and-economics/how-a-housing-downturn-could-wreck-chinas-growth-model/21805115">The Economist (2021)</a></span>
 
-						* It happened: by H1 2026, revenue from state land-use-rights sales was down 31.5% YoY (65% below the 2020 peak)—local governments’ embedded “option value” in land evaporated as the underlying asset (housing demand) collapsed.
-
 						Notes:
 
 						China’s leaders have cheered on the property boom for the best part of 30 years. When the central government overhauled the tax system in 1994, local authorities lost a large chunk of revenue. At the same time, local governments were prevented from issuing debt. Yet they were tasked with hitting high economic-growth targets, sometimes exceeding 10% a year. Selling land became one of the few things municipal officials could do to generate revenues, which would in turn finance roads and other public works. They could also set up companies that could borrow from banks and raise debt from other sources. This arrangement meant economic growth was tightly bound to booming property.
 
 						Between 1999 and 2007 the quantity of rural land transferred to urban use increased by an average annual rate of almost 23%, and public-land sales soared by an average of 31% a year. Soon the property market became the prime lever for controlling economic growth. During the global financial crisis much of China’s `$`586bn stimulus package came in the form of loans and shadow-banking funds for developers. “The property market was a vehicle for delivering the stimulus,” says Kevin Lai of Daiwa Capital Markets, a broker. By 2010 land sales accounted for more than 70% of municipal incomes a year, although the rate varied between regions.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Then the Underlying Collapsed<span class="subtitle"><br>China’s land-sale model since the 2021 property downturn</span>
+						* Land-sale revenue has fallen four years running: H1 2026 &minus;31.5% YoY (<a href="https://www.theepochtimes.com/china/chinas-land-sale-revenue-slump-deepens-despite-rise-in-fiscal-income-6066681">MoF data</a>); residential land revenue in 2025 ~65% below its 2020 peak (<a href="https://www.caixinglobal.com/2026-01-06/chinas-residential-land-sales-revenue-slumps-65-from-peak-as-state-backers-retreat-102400671.html">Caixin</a>)
+						* LGFVs (local governments’ own financing vehicles) propped up land auctions after 2021, but their share of purchases fell to 15% in 2025; state-owned developers now buy about half (<a href="https://www.caixinglobal.com/2026-01-06/chinas-residential-land-sales-revenue-slumps-65-from-peak-as-state-backers-retreat-102400671.html">Caixin</a>)
+						* Aug 2026 pre-sale reform: Goldman expects a further ~30% drop, up to 90% below the 2021 peak (<a href="https://www.bloomberg.com/news/articles/2026-09-07/china-property-moves-to-fuel-30-hit-to-land-sales-goldman-says">Bloomberg</a>)
+						* Real-options view: municipal income was essentially the value of the option to develop land&mdash;and that option value collapses with the underlying housing market
 					</textarea>
 				</section>
 
