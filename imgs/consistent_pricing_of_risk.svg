@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 520" width="930" height="520"
+     font-family="'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#222">
+  <title>Consistent pricing of risk: expected return vs. risk (drawn to scale)</title>
+  <!-- Scale: x 1% risk = 3.333px from x=110; y 1% return = 9.5px up from y=430 -->
+  <defs>
+    <marker id="axis" viewBox="0 0 12 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="13" orient="auto">
+      <path d="M0,0.5 L12,5 L0,9.5 L2.5,5 z" fill="#222"/>
+    </marker>
+    <marker id="rp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#1a9e3f"/>
+    </marker>
+  </defs>
+
+  <!-- guides -->
+  <g stroke="#999" stroke-width="1.5" stroke-dasharray="6 5" fill="none">
+    <line x1="110" y1="401.5" x2="820" y2="401.5"/>   <!-- rf = 3% -->
+    <line x1="110" y1="344.5" x2="232" y2="344.5"/>   <!-- 9% -->
+    <line x1="232" y1="344.5" x2="232" y2="430"/>     <!-- 36.67% -->
+    <line x1="110" y1="103"   x2="800" y2="103"/>     <!-- 34.42% -->
+    <line x1="750" y1="103"   x2="750" y2="430"/>     <!-- 192% -->
+  </g>
+
+  <!-- market line: E[r] = 3% + 0.164 x risk -->
+  <line x1="110" y1="401.5" x2="777" y2="90" stroke="#d62728" stroke-width="5" stroke-linecap="round"/>
+  <!-- risk premium of the option -->
+  <line x1="790" y1="108" x2="790" y2="396.5" stroke="#1a9e3f" stroke-width="3" marker-start="url(#rp)" marker-end="url(#rp)"/>
+  <text x="802" y="252">E(RP)</text>
+  <text x="802" y="280" font-size="20">31.42%</text>
+
+  <!-- axes -->
+  <g stroke="#222" stroke-width="3.5" fill="none">
+    <line x1="110" y1="430" x2="110" y2="48" marker-end="url(#axis)"/>
+    <line x1="110" y1="430" x2="860" y2="430" marker-end="url(#axis)"/>
+  </g>
+  <g font-weight="bold">
+    <text x="20" y="30">Expected return</text>
+    <text x="872" y="438">Risk</text>
+    <g text-anchor="end">
+      <text x="98" y="111">34.42%</text>
+      <text x="98" y="353">9%</text>
+      <text x="98" y="410">r<tspan font-size="17" dy="6">f</tspan><tspan dy="-6"> = 3%</tspan></text>
+    </g>
+    <g text-anchor="middle">
+      <text x="232" y="470">Built property</text>
+      <text x="232" y="498">36.67% range</text>
+      <text x="750" y="470">Development option</text>
+      <text x="750" y="498">192% range</text>
+    </g>
+  </g>
+</svg>

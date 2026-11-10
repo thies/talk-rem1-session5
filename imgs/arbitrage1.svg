@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 490" width="980" height="490"
+     font-family="'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#222" text-anchor="middle">
+  <title>Binomial outcome of the replicating portfolio</title>
+  <g fill="none" stroke="#222" stroke-width="2.5">
+    <!-- branches -->
+    <line x1="370" y1="185" x2="472" y2="95"/>
+    <line x1="370" y1="305" x2="492" y2="395"/>
+    <!-- nodes -->
+    <ellipse cx="220" cy="245" rx="210" ry="85"/>
+    <ellipse cx="715" cy="95"  rx="243" ry="85"/>
+    <ellipse cx="735" cy="395" rx="243" ry="85"/>
+  </g>
+
+  <!-- today -->
+  <text x="220" y="240" font-weight="bold">PV = $12.09m</text>
+  <text x="220" y="272">(this is what XYZ paid)</text>
+
+  <!-- probabilities -->
+  <text x="385" y="112" font-weight="bold">p = 70%</text>
+  <text x="392" y="400" font-weight="bold">p = 30%</text>
+
+  <!-- up -->
+  <text x="715" y="55" font-weight="bold">Up scenario</text>
+  <text x="715" y="86">Get 0.67 × $113.21 = $75.95</text>
+  <text x="715" y="117">Pay: $52.74</text>
+  <text x="715" y="148">Net: <tspan font-weight="bold">$23.21</tspan></text>
+
+  <!-- down -->
+  <text x="735" y="355" font-weight="bold">Down scenario</text>
+  <text x="735" y="386">Get 0.67 × $78.62 = $52.74</text>
+  <text x="735" y="417">Pay: $52.74</text>
+  <text x="735" y="448" font-weight="bold">Net: $0</text>
+</svg>

@@ -120,7 +120,20 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Cashflows, Prob., & NPV <span class="subtitle"><br>Land valuation and the development timing decision.</span>
-						<img src="imgs/XYZ1.png" height="500">
+						<table class="tex2jax_ignore npvtable">
+						<thead><tr><th></th><th>Today</th><th colspan="2">Next Year</th></tr></thead>
+						<tbody>
+						<tr><td>Probability</td><td>100%</td><td>p(down) = 30%</td><td>p(up) = 70%</td></tr>
+						<tr><td>Value of developed property</td><td>$100.00</td><td>$78.62</td><td>$113.21</td></tr>
+						<tr><td>Construction costs</td><td>$88.24</td><td>$90.00</td><td>$90.00</td></tr>
+						<tr><td>NPV of exercise</td><td>$11.76</td><td>&minus;$11.38</td><td>$23.21</td></tr>
+						<tr><td>Future values</td><td></td><td>$0<br>(don’t build)</td><td>$23.21<br>(build)</td></tr>
+						<tr><td>Expected value of property</td><td>$100.00<br>(1 &times; $100)</td><td colspan="2">$102.83<br>(0.3 &times; $78.62 + 0.7 &times; $113.21)</td></tr>
+						<tr><td>Expected value of option</td><td>$11.76<br>(1 &times; $11.76)</td><td colspan="2">$16.25<br>(0.3 &times; 0 + 0.7 &times; ($113.21 &minus; $90))</td></tr>
+						<tr><td>PV at 20% discount rate</td><td><b>$11.76</b></td><td colspan="2">$16.25 / 1.2 = <b>$13.54</b></td></tr>
+						</tbody>
+						<tfoot><tr><td colspan="4">Land value today = MAX($11.76, $13.54) = $13.54<br><b>Option premium</b> = $13.54 &minus; $11.76 = <b>$1.78</b></td></tr></tfoot>
+						</table>
 					</textarea>
 				</section>
 
@@ -193,7 +206,7 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Binomial outcome...<span class="subtitle"><br>Replicated cash flows cost `$`12.09 &mdash; This is the land’s value.</span>
-						<img src="imgs/arbitrage1.png" height=400>
+						<img src="imgs/arbitrage1.svg" height=400 style="display:block; margin:0 auto;">
 
 						* What is the required rate of return (to arrive at PV of `$`12.09)?
 					</textarea>
@@ -225,19 +238,21 @@
 						## Consistent pricing of risk  <span class="subtitle"><br>Risk premium per unit of risk, for property and land.
 </span>
 
-						* Risk, measured as range of outcomes, is consistently priced.<br><img src="imgs/consistent_pricing_of_risk.png" height="450">
+						* Risk, measured as range of outcomes, is consistently priced.
+
+						<img src="imgs/consistent_pricing_of_risk.svg" height="450" style="display:block; margin:0 auto;">
 					</textarea>
 				</section>
 
 				<section data-markdown >
 					<textarea data-template>
-						## Applying binomial models<span class="subtitle"><br>Titman (1985): “Why do we see parking lots in downtown L.A.?”</span>
+						## Applying binomial models<span class="subtitle"><br><a href="https://www.jstor.org/stable/1814815">Titman (1985)</a>: “Why do we see parking lots in downtown L.A.?”</span>
 						* Two dates/two states model, similar to stylized example before <br> <img src="imgs/titman.png" height=430>
 					</textarea>
 				</section>
 				<section data-markdown >
 					<textarea data-template>
-						## Continuous outcomes & time <span class="subtitle"><br> Black-Scholes (1973) approach</span>
+						## Continuous outcomes & time <span class="subtitle"><br> <a href="https://doi.org/10.1086/260062">Black-Scholes (1973)</a> approach</span>
 						* Price for options with more than two states: Distribution of outcomes.
 						* Based on same economic arbitrage principles as for binomial models in discrete time
 						* European call options (and variations)
@@ -271,7 +286,7 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Develop anytime<span class="subtitle"><br>American options more realistic for land.</span>
-						* Classical Samuelson-McKean formula for American warrant
+						* Classical <a href="https://doi.org/10.1007/978-3-319-22237-0_11">Samuelson-McKean formula</a> for American warrant
 						* Again, based on same economic arbitrage principles as models in discrete time or Black-Scholes approach
 						* Again, requires several strong assumptions
 							- Frictionless markets / efficient markets: “Random Walk” market value of underlying asset / Normally distributed returns to underlying asset
@@ -293,8 +308,8 @@
 						* Optimal development hurdle rate $V^{*}$
 							- $V^{*} = K_0\eta/(\eta-1)$
 						* Option value (vacant land)
-							- $C_0 = (V^{\*} - K_0)(V_0/V^{\*})\eta $
-						* Spreadsheet uploaded to Moodle
+							- $C_0 = (V^{\*} - K_0)(V_0/V^{\*})^{\eta}$
+						* <a href="https://docs.google.com/spreadsheets/d/1ZFnyyHze9uvHZMFEPuiY2sxWSYCtbp26/edit?usp=sharing&ouid=106899193538582867949&rtpof=true&sd=true">Try spreadsheet here</a>
 						* Visualisation: <a href="http://demonstrations.wolfram.com/RealOptions/">http://demonstrations.wolfram.com/RealOptions/</a>
 
 					</textarea>
@@ -657,19 +672,18 @@
 				width: 1244,
 				height: 700,
 				margin: 0.1,
-				math: {
-					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
-					config: 'TeX-AMS_HTML-full',
-					// pass other options into `MathJax.Hub.Config()`
-					TeX: { Macros: { RR: "{\\bf R}" } },
-					"HTML-CSS": { availableFonts: ["STIX-Web"], preferredFont: "STIX-Web", webFont: "STIX-Web" },
-					tex2jax: {
-  					inlineMath: [['$','$'], ['\\(','\\)']],
-    				processEscapes: true
-  					}
+				mathjax4: {
+					mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js',
+					tex: {
+						inlineMath: [['$','$'], ['\\(','\\)']],
+						processEscapes: true,
+						macros: { RR: "{\\bf R}" }
+					},
+					output: { font: 'mathjax-fira' },	// sans-serif maths (Fira Sans/Math)
+					options: { ignoreHtmlClass: 'tex2jax_ignore|mathjax_ignore' }
 				},
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax4 ]
 			});
 		</script>
 	</body>

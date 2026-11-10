@@ -119,7 +119,8 @@ table.noborderssmall td {
     font-size: 0.6em;}
 
 
-span.smalltable >* td,th {
+span.smalltable >* td,
+span.smalltable >* th {
     border: none;
     padding: 0;
     margin: 0;
@@ -135,3 +136,10 @@ section.compacttable table th {
   font-size: 0.6em;
   padding: 0.25em 0.6em;
 }
+
+/* "Cashflows, Prob., & NPV" slide: booktabs-style table */
+table.npvtable { font-size: 0.55em; border-collapse: collapse; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; }
+table.npvtable th, table.npvtable td { border: none; padding: 0.2em 0.7em; text-align: center; vertical-align: top; line-height: 1.25; }
+table.npvtable td:first-child { text-align: left; }
+table.npvtable thead th { border-bottom: 1px solid currentColor; }
+table.npvtable tfoot td { text-align: center; border-top: 1px solid currentColor; padding-top: 0.4em; }
